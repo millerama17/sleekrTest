@@ -11,6 +11,7 @@ while $i < words.length do
   item = words[rand(words.length)]
   item2 = item.split('').shuffle.join
   puts "Tebak kata: #{item2}"
+  print "Jawab: "
   answer = gets.chop
   if answer == item
     $result += 1
