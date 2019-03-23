@@ -7,7 +7,9 @@ words = Array["buku", "roti", "motor", "aku", "kamu", "dia", "cinta", "lagu",
         "daftar", "bendahara", "jenis", "ikat", "drama", "nelayan", "polisi",
         "tentara", "ekonomi", "akar", "pohon", "bulat", "persegi", "cabai",
         "ambigu", "teknologi", "interpretasi", "makna", "naif", "vakum"]
-while $i < words.length do
+puts "Berapa kali anda ingin bermain?"
+iteration = gets.chop
+while $i < iteration.to_i do
   item = words[rand(words.length)]
   item2 = item.split('').shuffle.join
   puts "Tebak kata: #{item2}"
