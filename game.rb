@@ -7,7 +7,6 @@ words = Array["buku", "roti", "motor", "aku", "kamu", "dia", "cinta", "lagu",
         "daftar", "bendahara", "jenis", "ikat", "drama", "nelayan", "polisi",
         "tentara", "ekonomi", "akar", "pohon", "bulat", "persegi", "cabai",
         "ambigu", "teknologi", "interpretasi", "makna", "naif", "vakum"]
-# words = Array["buku", "roti", "motor"]
 while $i < words.length do
   item = words[rand(words.length)]
   item2 = item.split('').shuffle.join
