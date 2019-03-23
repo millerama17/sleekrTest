@@ -7,7 +7,7 @@ words = Array["buku", "roti", "motor", "aku", "kamu", "dia", "cinta", "lagu",
         "daftar", "bendahara", "jenis", "ikat", "drama", "nelayan", "polisi",
         "tentara", "ekonomi", "akar", "pohon", "bulat", "persegi", "cabai",
         "ambigu", "teknologi", "interpretasi", "makna", "naif", "vakum"]
-puts "Berapa kali anda ingin bermain?"
+puts "Berapa kata yang ingin anda tebak?"
 iteration = gets.chop
 while $i < iteration.to_i do
   item = words[rand(words.length)]
@@ -25,7 +25,7 @@ while $i < iteration.to_i do
     puts "SALAH! silahkan coba lagi"
   end
   $i += 1
-  if $i == words.length
+  if $i == iteration.to_i
     puts "Apakah anda ingin bermain lagi? (YA/TIDAK)"
     response = gets.chop
     if response == "YA"
