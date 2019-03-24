@@ -18,7 +18,13 @@ sifat = Array["banyak", "besar", "benar", "cerdik", "cermat", "cerdas",
         "lama", "lincah", "lucu", "lambat", "malas", "nakal"]
 
 puts "Berapa kata yang ingin anda tebak?"
-iteration = gets.chop
+begin
+  iteration = gets.chop
+  iteration = Integer(iteration)
+rescue
+  puts "Silahkan masukkan angka yang valid"
+  retry
+end
 puts "Kategori apa yang ingin anda mainkan?"
 puts "Tersedia 3 kategori (KERJA/SIFAT/BEBAS)"
 category = gets.chop
