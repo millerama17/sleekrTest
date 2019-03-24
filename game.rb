@@ -37,7 +37,7 @@ elsif category == "BEBAS"
 else
   puts "Kategori tidak ada, anda akan bermain dengan kategori BEBAS"
 end
-while $i < iteration.to_i do
+while $i < iteration do
   if category == "KERJA"
     item = kerja[rand(kerja.length)]
   elsif category == "SIFAT"
