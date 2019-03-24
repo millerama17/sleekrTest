@@ -20,11 +20,21 @@ sifat = Array["banyak", "besar", "benar", "cerdik", "cermat", "cerdas",
 puts "Berapa kata yang ingin anda tebak?"
 iteration = gets.chop
 puts "Kategori apa yang ingin anda mainkan?"
+puts "Tersedia 3 kategori (KERJA/SIFAT/BEBAS)"
 category = gets.chop
+if category == "KERJA"
+  puts "Anda memilih kategori KERJA"
+elsif category == "SIFAT"
+  puts "Anda memilih kategori SIFAT"
+elsif category == "BEBAS"
+  puts "Anda memilih kategori BEBAS"
+else
+  puts "Kategori tidak ada, anda akan bermain dengan kategori BEBAS"
+end
 while $i < iteration.to_i do
-  if category == "kerja"
+  if category == "KERJA"
     item = kerja[rand(kerja.length)]
-  elsif category == "sifat"
+  elsif category == "SIFAT"
     item = sifat[rand(sifat.length)]
   else
     item = bebas[rand(bebas.length)]
