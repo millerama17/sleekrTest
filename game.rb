@@ -1,16 +1,26 @@
 puts "Selamat Datang di Game Tebak Kata"
 $i = 0
 $result = 0
-words = Array["buku", "roti", "motor", "aku", "kamu", "dia", "cinta", "lagu",
+bebas = Array["buku", "roti", "motor", "aku", "kamu", "dia", "cinta", "lagu",
         "romansa", "cantik", "bando", "senja", "masalah", "madu", "laptop",
         "denda", "hukum", "politik", "imlek", "kedip", "mata", "telinga",
         "daftar", "bendahara", "jenis", "ikat", "drama", "nelayan", "polisi",
         "tentara", "ekonomi", "akar", "pohon", "bulat", "persegi", "cabai",
         "ambigu", "teknologi", "interpretasi", "makna", "naif", "vakum"]
+kerja = Array["aduk", "angkat", "makan", "minum", "tidur", "dengar", "datang",
+        "dapat", "cakar", "centang", "contek", "bisik", "tukar", "tumpah",
+        "potong", "petik", "putar", "tembak", "tembus", "tendang", "hisap",
+        "pegang", "ungkit", "usap", "buat", "ungkap"]
 puts "Berapa kata yang ingin anda tebak?"
 iteration = gets.chop
+puts "Kategori apa yang ingin anda mainkan?"
+category = gets.chop
 while $i < iteration.to_i do
-  item = words[rand(words.length)]
+  if category == "kerja"
+    item = kerja[rand(kerja.length)]
+  else
+    item = bebas[rand(bebas.length)]
+  end
   item2 = item.split('').shuffle.join
   puts "Tebak kata: #{item2}"
   print "Jawab: "
