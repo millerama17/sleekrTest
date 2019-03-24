@@ -11,6 +11,12 @@ kerja = Array["aduk", "angkat", "makan", "minum", "tidur", "dengar", "datang",
         "dapat", "cakar", "centang", "contek", "bisik", "tukar", "tumpah",
         "potong", "petik", "putar", "tembak", "tembus", "tendang", "hisap",
         "pegang", "ungkit", "usap", "buat", "ungkap"]
+sifat = Array["banyak", "besar", "benar", "cerdik", "cermat", "cerdas",
+        "cukup", "cetek", "congkak", "culun", "dikit", "dekat", "datar",
+        "gosong", "girang", "hancur", "hangat", "hemat", "indah", "handal",
+        "istimewa", "jenaka", "janggal", "jinak", "jantan", "kesal", "kotor",
+        "lama", "lincah", "lucu", "lambat", "malas", "nakal"]
+
 puts "Berapa kata yang ingin anda tebak?"
 iteration = gets.chop
 puts "Kategori apa yang ingin anda mainkan?"
@@ -18,6 +24,8 @@ category = gets.chop
 while $i < iteration.to_i do
   if category == "kerja"
     item = kerja[rand(kerja.length)]
+  elsif category == "sifat"
+    item = sifat[rand(sifat.length)]
   else
     item = bebas[rand(bebas.length)]
   end
